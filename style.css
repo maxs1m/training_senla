@@ -1,4 +1,178 @@
 body {
-	font-family: "Gilroy", sans-serif;
 	background-color: #F6F6F6;
+	font-family: Gilroy, sans-serif;
+	font-size: 16px;
+}
+
+header {
+
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+  list-style-type: none; /* Убираем маркеры */
+  
+}
+
+ul {
+	
+}
+
+p {
+	margin: 0;
+}
+
+.text_SemiBold {
+	font-family: Gilroy-SemiBold, sans-serif;
+}
+
+.text_Bold {
+	font-family: Gilroy-Bold, sans-serif;
+}
+
+.text_Light {
+	font-family: Gilroy-Light, sans-serif;
+}
+
+.text_18 {
+	font-size: 18px;
+}
+
+.text_gray2 {
+	color: #242424;
+}
+
+.text_gray3 {
+	color: #474747;
+}
+
+.text_gray4 {
+	color: #6B6B6B;
+}
+
+
+.nav-top {
+	position: relative;
+	max-width: 1146px;
+	margin: 0 auto;
+}
+
+.nav-top-menu {
+	margin: 0;
+	padding: 54px 0 0 0;
+}
+
+.nav-top-menu__item {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 32px;
+	line-height: 19.09px;
+}
+
+.nav-top-menu li:nth-child(2) {
+	margin-right: 194px;
+}
+
+.nav-top-menu li:nth-child(4) {
+	margin-right: 289px;
+}
+
+.nav-top-menu li:nth-child(5) {
+	margin-right: 28px;
+}
+
+.nav-top-menu::after {
+	content: "";
+	background-image: url("img/dog1.jpg");
+	position: absolute;
+  right: 0;
+  top: 0;
+  width: 718px;
+  height: 713px;
+  z-index: -1;
+}
+
+.soc-net {
+	border: 2px solid #FFFFFF;
+	border-radius: 24.5px;
+}
+
+.soc-net_img {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+}
+
+.about {
+	min-height: 731px;
+}
+
+.about__background {
+	position: relative;
+	max-width: 1366px;
+	min-height: 731px;
+	margin: 0 auto;
+	background-image: url("img/Я буду.png"), url("img/лучшим.png"), url("img/другом.png");
+	background-repeat: no-repeat;
+	background-position: 0 271px, -2px 463px, 296px 568px;
+	opacity: 1;
+}
+
+.about__content::after {
+	content: "";
+	background-image: url("img/cat 1.png");
+	position: absolute;
+  right: 276px;
+  top: 367px;
+  width: 483px;
+  height: 469px;
+}
+
+.about__content {
+	box-sizing: border-box;
+	max-width: 1146px;
+	margin: auto;
+	padding: 61px 487px 50px 0;
+}
+
+h1 {
+	font-size: 72px;
+	margin: 0;
+	line-height: 77px;
+}
+
+
+
+.about__annotation {
+	display: block;
+	margin: 2px 0 12px 0;
+}
+
+.about__text {
+	line-height: 1.4;
+}
+
+.about__attention {
+	max-width: 428px;
+	font-size: 24px;
+	color: #C78100;
+	margin: 43px 0 44px 0;
+	line-height: 1.21;
+}
+
+.btn {
+	font-family: Gilroy-Medium, sans-serif;
+	font-size: 20px;
+	color: black;
+	line-height: 1.6;
+	background-color: #FBC832;
+	border: 0px solid #FBC832;
+	border-radius: 58px;
+	padding: 5px 33px;
+	
 }
