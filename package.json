@@ -1,0 +1,22 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "SENLA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxs1m/training_senla.git"
+  },
+  "author": "Maksim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxs1m/training_senla/issues"
+  },
+  "homepage": "https://github.com/maxs1m/training_senla#readme",
+  "devDependencies": {
+    "webpack": "^5.21.2"
+  }
+}

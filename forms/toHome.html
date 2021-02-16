@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Забрать домой</title>
+	<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+	<link href="../style.css" rel="stylesheet">
+	<link href="../fonts.css" rel="stylesheet">
+</head>
+<body class="form">
+	<header class="form__header">
+		<h6>Забрать домой</h6>
+		<button class="form__close"><img src="../img/cross.svg"></button>
+	</header>
+	<main>
+		<div class="form__info form__box">
+			Оставьте информацию о&nbsp;себе. Мы&nbsp;позвоним вам и&nbsp;договоримся, когда вы&nbsp;сможете забрать себе <br>питомца.
+		</div>
+		<form action="" method="get">
+			<div class="">
+				<label for="name" class="form__label">Фамилия и имя</label><br>
+				<input type="text" name="name" id="name" placeholder="Введите ваше имя и фамилию" class="form__input">
+			</div>
+			<div class="form__box">
+				<label for="tel" class="form__label">Номер телефона (только белорусский номер)</label><br>
+				<input type="tel" name="tel" id="tel" placeholder="Введите ваш номер телефона" class="form__input"><br>
+				<span class="input__sign">Обязательное поле для заполнения</span>
+			</div>
+			<div class="form__areabox">
+				<label for="comments" class="form__label">Замечания</label><br>
+				<textarea name="comments" id="comments" placeholder="Введите информацию, которая будет полезна нам" class="form__input form__area"></textarea>
+			</div>
+			<div class="form__contact">
+				Если у вас есть вопросы, можете позвонить нам:<br>
+				+375 (33) 6237879  Лена<br>
+				+375 (29) 7877791  Ольга<br>
+				+375 (29) 5837015  Рита
+			</div>
+			<div class="form__btn">
+				<input type="submit" name="submit" value="Отправить" class="btn">
+				<input type="button" name="cancel" value="Отмена" class="btn btn_white">
+			</div>
+		</form>
+	</main>
+	
+</body>
+</html>

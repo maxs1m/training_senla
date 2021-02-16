@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Волонтерство</title>
+	<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+	<link href="../style.css" rel="stylesheet">
+	<link href="../fonts.css" rel="stylesheet">
+</head>
+<body class="form form_wide">
+	<header class="form__header">
+		<h6>Волонтерство</h6>
+		<button class="form__close"><img src="../img/cross.svg"></button>
+	</header>
+	<main>
+		<h4 class="form__title">Заявка</h4>
+		<div class="form__info">
+			Отправьте нам заявку о&nbsp;том, что готовы помочь. Когда нам будет необходима помощь в&nbsp;транспортировке, мы&nbsp;позвоним вам.
+		</div>
+		<form action="" method="get">
+			<div class="">
+				<label for="name" class="form__label">Фамилия и имя</label><br>
+				<input type="text" name="name" id="name" placeholder="Введите ваше имя и фамилию" class="form__input">
+			</div>
+			<div class="form__box">
+				<label for="tel" class="form__label">Номер телефона (только белорусский номер)</label><br>
+				<input type="tel" name="tel" id="tel" placeholder="Введите ваш номер телефона" class="form__input"><br>
+				<span class="input__sign">Обязательное поле для заполнения</span>
+			</div>
+			<div class="form__radio">
+				<input type="radio" name="variants" value="1" id="var1" class="radio">
+				<label for="var1" class="radio__label form__label">Хочу помогать на&nbsp;постоянной основе (расписание можно подобрать так, как будет удобно для всех)</label>
+				<input type="radio" name="variants" value="2" id="var2" class="radio">
+				<label for="var2" class="radio__label form__label">Готов помогать иногда. Хочу выбрать удобное для меня время</label>
+			</div>
+			<div class="form__areabox areabox_zero">
+				<label for="comments" class="form__label">Замечания</label><br>
+				<textarea name="comments" id="comments" placeholder="Опишите, как вы&nbsp;сможете нам помочь и&nbsp;удобное время для вас" class="form__input form__area"></textarea>
+			</div>
+			<div class="form__btn">
+				<input type="submit" name="submit" value="Отправить заявку" class="btn">
+				<input type="button" name="cancel" value="Отмена" class="btn btn_white">
+			</div>
+		</form>
+	</main>
+	
+</body>
+</html>
