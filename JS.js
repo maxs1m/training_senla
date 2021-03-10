@@ -59,21 +59,23 @@ function showForms(form, btn) {
 };
 
 
+function closeForm (form, btn) {
+	btn.onclick = function () {
+		form.classList.remove('visible_form');
+		if (form.querySelector('.pets-to-form')) {
+			form.querySelector('.pets-to-form').remove();
+		}	
+	}
+}
+
+
 function hideForm() {
 	for (let form of forms) {
 		var btn = form.querySelector('.form__close');
-		btn.onclick = function () {
-			if (form.classList.contains('visible_form')) {
-				form.classList.remove('visible_form');
-			}	
-		}
+		closeForm(form, btn);
 		if (form.querySelector('.cancel')) {
 			var cancel = form.querySelector('.cancel');
-			cancel.onclick = function () {
-				if (form.classList.contains('visible_form')) {
-					form.classList.remove('visible_form');
-				}	
-			}
+			closeForm(form, cancel);
 		}
 	}
 }
@@ -86,42 +88,39 @@ showForms(volForm, volBtn);
 
 // формы для питомцев 
 
-
-
 for (let petCard of petCards) {
-
 	var toHomeBtn = petCard.querySelector('.toHome__btn');
 	var toTempBtn = petCard.querySelector('.toTemp__btn');
 	
-	
+	let insert = petCard.querySelector('.pets-to-form');
+	let insertForm = insert.cloneNode(true);
 
-	toHomeBtn.onclick = function () {
-		toHomeForm.classList.add('visible_form');
-	}
-	toTempBtn.onclick = function () {
-		toTempForm.classList.add('visible_form');
-	}
-	
+	showPetForm(toHomeForm, toHomeBtn, insertForm);
+	showPetForm(toTempForm, toTempBtn, insertForm);
+	hidePetForm(toHomeForm, 'toHome__btn');
+	hidePetForm(toTempForm, 'toTemp__btn');
 }
 
-window.addEventListener('click', function (e) {
-	  if (!toHomeForm.contains(e.target) && !(e.target.classList.contains('toHome__btn')) && toHomeForm.classList.contains('visible_form')) {
-	    toHomeForm.classList.remove('visible_form');
+function showPetForm(form, btn, insert) {
+	btn.onclick = function() {
+		form.classList.add('visible_form');
+		form.querySelector('.add_js').appendChild(insert);
+	}
+}
+
+function hidePetForm(form, classBtn) {
+	window.addEventListener('click', function (e) {
+	  if (!form.contains(e.target) && !(e.target.classList.contains(classBtn)) && form.classList.contains('visible_form')) {
+	    form.classList.remove('visible_form');
+	    form.querySelector('.pets-to-form').remove();
 	  }
-});
+	});
+}
 
-window.addEventListener('click', function (e) {
-	  if (!toTempForm.contains(e.target) && !(e.target.classList.contains('toTemp__btn')) && toTempForm.classList.contains('visible_form')) {
-	    toTempForm.classList.remove('visible_form');
-	  }
-});
+// открытие карты
+let mapBtn = document.querySelector('.map__btn');
+let map = document.querySelector('.map')
 
-
-//let img = petCard.querySelector('.pets__img');
-	//let picture = img.cloneNode(false);
-//let img = document.querySelector('.pets__img');
-//let div = document.querySelector('.add_js');
-//let picture = img.cloneNode(false);
-//div.appendChild(picture);
-//console.log(img.src);
-//let div = document.querySelector('.add_js');
+mapBtn.onclick = function() {
+	map.style.display = "block";
+}
