@@ -6,7 +6,6 @@
 		<link href="style.css" rel="stylesheet">
 		<link href="fonts.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 	</head>
 	<body>
 		<header>
@@ -25,13 +24,13 @@
 					</ul>
 					<ul class="soc-net__box">
 						<li class="soc-net">
-							<a href="" class="soc-net_img">
-								<img src="img/Vk.svg" class="img_VK">
+							<a href="https://vk.com/animalsgrodno" class="soc-net_img" target="_blank">
+								<img src="img/Vk.svg" class="img_VK_white img_VK">
 							</a>
 						</li>
 						<li class="soc-net">
-							<a href="" class="soc-net_img">
-								<img src="img/Inst.svg" class="img_Inst">
+							<a href="https://www.instagram.com/animalsgrodno/" class="soc-net_img" target="_blank">
+								<img src="img/Inst.svg" class="img_Inst_white img_Inst">
 							</a>
 						</li>
 					</ul>
@@ -45,9 +44,9 @@
 						<h1>СПАСИ ЖИЗНЬ</h1>
 						<span class="intro__annotation">Благотворительное общественное объединение защиты животных</span>
 						<p class="intro__text" >Наша цель: помощь бездомным животным. Также мы&nbsp;поддерживаем хвостиков, которые оказались в&nbsp;пункте отлова и&nbsp;временного содержания в&nbsp;Гродно.</p>
-						<p class="intro__attention intro__text">У&nbsp;животных, находящихся в&nbsp;пункте отлова и&nbsp;временного содержания бродячих животных, есть всего несколько дней до&nbsp;усыпления...</p>
-						<div class="btn__wrap">
-							<button class="btn intro__btn">Хочу помочь</button>
+						<p class="intro__attention intro__text slide">У&nbsp;животных, находящихся в&nbsp;пункте отлова и&nbsp;временного содержания бродячих животных, есть всего несколько дней до&nbsp;усыпления...</p>
+						<div class="btn__wrap btn__wrap_intro slide">
+							<a class="btn intro__btn" href="#help">Хочу помочь</a>
 						</div> 
 					</div>
 				</div>
@@ -69,32 +68,42 @@
 				<h3 class="title_center">Как помочь?</h3>
 				<div class="help__content content">
 					<div class="help__box">
-						<a href="#variants">
-							<img src="img/Group 9.svg" class="help__img">
+						<a href="#variants" class="help__link">
+							<div class="help__img-wrap">
+								<img src="img/Frame 360.svg" class="help__img">
+							</div>
 							<p class="help__text">Дать хвостику дом или взять на передержку</p>
 						</a>
 					</div>
 					<div class="help__box">
-						<a href="#finanсe">
-							<img src="img/Group 15.svg" class="help__img">
+						<a href="#finanсe" class="help__link">
+							<div class="help__img-wrap">
+								<img src="img/Frame 359.svg" class="help__img">
+							</div>
 							<p class="help__text">Перечислить деньги в фонд помощи</p>
 						</a>
 					</div>
 					<div class="help__box">
-						<a href="#need">
-							<img src="img/Group 14.svg" class="help__img">
+						<a href="#need" class="help__link">
+							<div class="help__img-wrap">
+								<img src="img/Frame 361.svg" class="help__img">
+							</div>
 							<p class="help__text">Привезти корм, лекарства или другие вещи</p>
 						</a>
 					</div>
 					<div class="help__box">
-						<a href="#auto">
-							<img src="img/Group 10.svg" class="help__img">
+						<a href="#auto" class="help__link">
+							<div class="help__img-wrap">
+								<img src="img/Frame 362.svg" class="help__img">
+							</div>
 							<p class="help__text">Доставить животным еду или отвезти в больницу</p>
 						</a>
 					</div>
 					<div class="help__box">
-						<a href="#vol">
-							<img src="img/Group 13.svg" class="help__img">
+						<a href="#vol" class="help__link">
+							<div class="help__img-wrap">
+								<img src="img/Frame 363.svg" class="help__img">
+							</div>
 							<p class="help__text">Выгуливать, кормить, мыть или лечить хвостиков</p>
 						</a>
 					</div>
@@ -267,12 +276,12 @@
 						<p class="pets__nav-text">Помочь быстрее пристроить хвостиков можно путем размещения наших постов у&nbsp;себя в&nbsp;соц сетях. Переходите на&nbsp;наши странички.</p>
 						<div class="soc-net__box pets__soc-net">
 							<div class="soc-net soc-net_yellow">
-								<a href="" class="soc-net_img">
+								<a href="" class="soc-net_img soc-net_img_white">
 									<img src="img/VkO.svg" class="img_VK">
 								</a>
 							</div>
 							<div class="soc-net soc-net_yellow">
-								<a href="" class="soc-net_img">
+								<a href="" class="soc-net_img soc-net_img_white">
 									<img src="img/InstO.svg" class="img_Inst">
 								</a>
 							</div>
@@ -382,7 +391,7 @@
 						   БИК: ALFABY2X
 						</p>
 						<div class="btn__wrap finance__btn">
-							<button class="btn">Быстрый платёж</button>
+							<a class="btn" onclick="window.location.href = 'https://express-pay.by/';">Быстрый платёж</a>
 						</div>
 					</div>
 					<div class="finance__box">
@@ -608,12 +617,12 @@
 						<span class="contact__soc">Связаться с нами можно написав в соц. сетях.</span>
 							<div class="soc-net__box">
 								<div class="soc-net soc-net_yellow">
-									<a href="" class="soc-net_img">
+									<a href="" class="soc-net_img soc-net_img_white">
 										<img src="img/VkO.svg" class="img_VK">
 									</a>
 								</div>
 								<div class="soc-net soc-net_yellow">
-									<a href="" class="soc-net_img">
+									<a href="" class="soc-net_img soc-net_img_white">
 										<img src="img/InstO.svg" class="img_Inst">
 									</a>
 								</div>

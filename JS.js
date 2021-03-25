@@ -124,3 +124,44 @@ let map = document.querySelector('.map')
 mapBtn.onclick = function() {
 	map.style.display = "block";
 }
+
+// анимации
+
+let isScrolling = false;
+ 
+window.addEventListener("scroll", throttleScroll, false);
+
+function throttleScroll(e) {
+  if (isScrolling == false) {
+    window.requestAnimationFrame(function() {
+      scrolling(e);
+      isScrolling = false;
+    });
+  }
+  isScrolling = true;
+}
+
+document.addEventListener("DOMContentLoaded", scrolling, false);
+
+let helpContent = document.querySelector('.help__content');
+let helpBoxes = document.querySelectorAll('.help__box');
+
+function scrolling(e) {
+  	for (let helpBox of helpBoxes) {
+  		if (isPartiallyVisible(helpContent)) {
+  			helpBox.classList.add('help__box_slide');
+  		} else {
+  			helpBox.classList.remove('help__box_slide');
+  		}
+  	}
+}
+
+function isPartiallyVisible(el) {
+	var elementBoundary = el.getBoundingClientRect();
+
+	var top = elementBoundary.top;
+	var bottom = elementBoundary.bottom;
+	var height = elementBoundary.height;
+
+	return ((top + height >= 0) && (height + window.innerHeight >= bottom));
+}
