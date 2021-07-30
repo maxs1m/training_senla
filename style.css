@@ -311,13 +311,6 @@ strong {
 	background-repeat: no-repeat;
 	background-size: 43.6%, 38.9%, 34.5%;
 	background-position: 0 286px, 0px 478px, 296px 583px;
-	animation: back__slide 1.5s linear forwards;
-}
-
-@keyframes back__slide {
-	0% {
-		background-position: 0 486px, 0px 678px, 296px 783px;
-	}
 }
 
 .slide {
@@ -586,6 +579,7 @@ strong {
 	border: 1px solid #D6D6D6;
 	border-radius: 5px;
 	box-shadow: 6px 6px 16px rgba(163, 163, 163, 0.6), -8px -8px 16px #FFFFFF, inset 4px 4px 16px rgba(203, 203, 203, 0.25);
+	overflow: hidden;
 }
 
 .pet__name {
